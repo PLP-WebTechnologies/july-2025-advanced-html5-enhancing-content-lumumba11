@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced HTML5 Assignment</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --border: #ddd;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    header, main, footer {
+      max-width: 900px;
+      margin: 2em auto;
+      background: var(--card);
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      color: var(--accent);
+      margin-bottom: 0.2em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      padding-left: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    section {
+      margin-top: 2em;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1em;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.75em;
+      text-align: left;
+    }
+
+    th {
+      background: #ecf0f1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+    }
+
+    fieldset {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5em;
+    }
+
+    legend {
+      font-weight: bold;
+      color: var(--accent);
+      padding: 0 0.5em;
+    }
+
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin-top: 0.5em;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: auto;
+      margin-right: 0.5em;
+    }
+
+    button {
+      padding: 0.75em 1.5em;
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 1em;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    figure {
+      margin: 1em 0;
+    }
+
+    figcaption {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 2em;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HTML5 Form & Content Showcase</h1>
+    <p>This page demonstrates semantic HTML5 structure, accessible forms, styled tables, lists, and embedded media content — all with intuitive design.</p>
+  </header>
+
+  <main>
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#form">Form</a></li>
+      </ul>
+    </nav>
+
+    <!-- Lists Section -->
+    <section id="lists">
+      <h2>Useful Lists</h2>
+
+      <h3>Ordered: Web Development Steps</h3>
+      <ol>
+        <li>Research and Planning</li>
+        <li>Wireframing and Design</li>
+        <li>Development</li>
+        <li>Testing & Debugging</li>
+        <li>Deployment</li>
+      </ol>
+
+      <h3>Unordered: Tools You'll Need</h3>
+      <ul>
+        <li>VS Code</li>
+        <li>Chrome DevTools</li>
+        <li>Git & GitHub</li>
+        <li>Terminal / Shell</li>
+      </ul>
+    </section>
+
+    <!-- Table Section -->
+    <section id="table">
+      <h2>Technology Comparison Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Role</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML5</td>
+            <td>Structure</td>
+            <td>&lt;article&gt;, &lt;form&gt;</td>
+          </tr>
+          <tr>
+            <td>CSS3</td>
+            <td>Styling</td>
+            <td>border-radius, flexbox</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Behavior</td>
+            <td>Event listeners, DOM manipulation</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+      <h2>Media Content</h2>
+
+      <figure>
+        <img src="test.jpg" alt="Sample Visual" width="30%" height="50%">
+        <figcaption>Figure 1: Example of a responsive image</figcaption>
+      </figure>
+
+      <figure>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption>Figure 2: Sample background music</figcaption>
+      </figure>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form">
+      <h2>User Registration Form</h2>
+
+      <form action="#" method="POST" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="07XXXXXXXX" required>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" value="Kenya" readonly>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Preferences</legend>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="6" required>
+
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="Male" required> Male
+          <input type="radio" name="gender" value="Female"> Female
+          <input type="radio" name="gender" value="Other"> Other
+
+          <label>Skills:</label>
+          <input type="checkbox" name="skills" value="HTML"> HTML
+          <input type="checkbox" name="skills" value="CSS"> CSS
+          <input type="checkbox" name="skills" value="JS"> JavaScript
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" placeholder="Tell us about yourself..." rows="4" required></textarea>
+
+          <label for="upload">Upload Profile Photo:</label>
+          <input type="file" id="upload" name="upload" accept="image/*">
+        </fieldset>
+
+        <div>
+          <button type="submit">Submit Form</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 | HTML5 Forms & Semantic Web Assignment | Student: Alex Lumumba</p>
+  </footer>
+
+</body>
+</html>
